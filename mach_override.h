@@ -49,7 +49,7 @@ __END_DECLS
 #ifdef	__cplusplus
 #define MACH_OVERRIDE( ORIGINAL_FUNCTION_RETURN_TYPE, ORIGINAL_FUNCTION_NAME, ORIGINAL_FUNCTION_ARGS, ERR )		\
 {																												\
-	static ORIGINAL_FUNCTION_RETURN_TYPE (*ORIGINAL_FUNCTION_NAME##_reenter)ORIGINAL_FUNCTION_ARGS;				\
+	static ORIGINAL_FUNCTION_RETURN_TYPE (*ORIGINAL_FUNCTION_NAME##_reenter)ORIGINAL_FUNCTION_ARGS= NULL;		\
 	static bool ORIGINAL_FUNCTION_NAME##_overriden = false;														\
 	class mach_override_class__##ORIGINAL_FUNCTION_NAME {														\
 	public:																										\

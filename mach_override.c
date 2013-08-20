@@ -175,6 +175,7 @@ mach_override_ptr(
 {
 	assert( originalFunctionAddress );
 	assert( overrideFunctionAddress );
+	assert( originalFunctionReentryIsland == NULL || *originalFunctionReentryIsland == NULL );
 	
 	// this addresses overriding such functions as AudioOutputUnitStart()
 	// test with modified DefaultOutputUnit project
